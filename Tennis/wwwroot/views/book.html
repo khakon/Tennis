@@ -1,0 +1,29 @@
+﻿<div class="book-popup popup" dx-popup="{
+    closeOnOutsideClick: false,
+    contentTemplate: 'bookTemplate',
+    fullScreen: false,
+    shading: true,
+    width: '100%',
+    maxWidth: 480,
+    dragEnabled: false,
+    position: { of: window, offset: '0 0' },
+    bindingOptions: {
+        showTitle: 'responsivenessOptions.showTitle',
+        height: 'responsivenessOptions.bookingHeight',
+        visible:'book.bookVisible'
+    }
+}">
+    <div class="template-book" ng-class="{'dx-responsivebox-screen-xs': !responsivenessOptions.largeScreen}" data-options="dxTemplate:{ name: 'bookTemplate' }">
+        <div class="title">Add Training</div>
+        <div class="buttons-on-popup">
+            <div class="button-popup white-text green-button" dx-button="{
+                        onClick: $parent.booking,
+                        text: 'Book'
+                    }"></div>
+            <div class="button-popup cancel" dx-button="{
+                        onClick: $parent.showBook,
+                        text: 'Cancel'
+                    }"></div>
+        </div>
+    </div>
+</div>

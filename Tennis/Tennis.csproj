@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\lib\cldrjs\**" />
+    <Content Remove="wwwroot\lib\cldrjs\**" />
+    <EmbeddedResource Remove="wwwroot\lib\cldrjs\**" />
+    <None Remove="wwwroot\lib\cldrjs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\js\app.js" />
+    <Content Include="wwwroot\js\config.js" />
+    <Content Include="wwwroot\js\controllers\bookController.js" />
+    <Content Include="wwwroot\js\controllers\homeController.js" />
+    <Content Include="wwwroot\js\controllers\infoController.js" />
+    <Content Include="wwwroot\js\controllers\layoutController.js" />
+    <Content Include="wwwroot\js\controllers\searchPanelController.js" />
+    <Content Include="wwwroot\js\repository.js" />
+    <Content Include="wwwroot\js\utils.js" />
+    <Content Include="wwwroot\views\book.html" />
+    <Content Include="wwwroot\views\home.html" />
+    <Content Include="wwwroot\views\info.html" />
+    <Content Include="wwwroot\views\layout.html" />
+    <Content Include="wwwroot\views\searchPanel.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+  </ItemGroup>
+
+</Project>

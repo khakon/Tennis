@@ -1,0 +1,101 @@
+﻿<div class="home-page">
+    <div class="responsive-home" dx-responsive-box="{
+        rows: [
+            { baseSize: 414, screen: 'lg sm md' },
+            { baseSize: 384, screen: 'lg sm md' },
+            { baseSize: 175, screen: 'lg sm md' },
+            { ratio: 1 },
+            { ratio: 1 }
+        ],
+        cols: [
+            { baseSize: 475, ratio: 0 },
+            { baseSize: 550, ratio: 0 }
+        ],
+        screenByWidth: getScreen,
+        singleColumnScreen: 'xs'
+    }">
+        <div data-options="dxItem: {
+            location: [{
+                row: 0,
+                col: 0,
+                screen: 'lg md sm'
+            }, {
+                row: 0,
+                col: 0,
+                colspan: 2,
+                screen: 'xs'
+                 }]}">
+            <div class="search-container">
+                <div ng-include="'views/searchPanel.html'" ng-controller="SearchPanelCtrl"></div>
+            </div>
+        </div>
+        <div class="banner" data-options="dxItem: {
+            location: [{
+                row: 0,
+                col: 1,
+                screen: 'lg md sm'
+            }, {
+                row: 1,
+                col: 0,
+                colspan: 2,
+                screen: 'xs'
+                 }]}">
+            <div class="banner-container text-space">
+                <div class="top-side">
+                    <div class="offer">Offer of the day</div>
+                    <div class="offer-name">{{home.offer.Name}}</div>
+                </div>
+                <div class="bottom-side">
+                    <div class="description">
+                        <div class="text">
+                           {{home.offer.Price}} per player<br />
+                            {{home.offer.Cover}} cover
+                        </div>
+                        <div class="raiting">
+                            <div class="value" ng-style="{ 'width' : 20 * home.offer.Rating + '%'}"></div>
+                        </div>
+                    </div>
+                    <div class="more-info white-text green-button" dx-button="{
+                        onClick: moreInfo,
+                        text: 'More info'
+                    }"></div>
+                </div>
+            </div>
+        </div>
+        <div id="info" data-options="dxItem: {
+            location: [{
+                row: 1,
+                col: 0,
+                colspan: 4,
+                screen: 'lg md sm'
+            }, {
+                row: 2,
+                col: 0,
+                screen: 'xs'
+            }]}">
+            <div class="info-clubs">
+                <div class="content">
+                    <div class="best-title">Tennis courts</div>
+                    <div class="best-clubs">
+                        <div class="club" tabindex="0" ng-repeat="court in home.courts" ng-keypress="keyPressOnCourt($event, court)" ng-click="goToInfo(court)">
+                            <div class="image" ng-style="{'background-image':'url({{court.image}})'}"></div>
+                            <div class="name">{{court.name}}</div>
+                            <div class="description">{{court.description}}</div>
+                            <div class="address">{{court.region}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div dx-load-panel="{
+        message: 'Loading...',
+        shading: true,
+        showPane: false,
+        shadingColor: '#fff',
+        position:{ of: '#info' },
+        bindingOptions: {
+            visible: 'home.loadingData'
+        }
+    }"></div>
+</div>

@@ -1,0 +1,770 @@
+@accent-color-hover-state: #5ea400;
+@accent-color: #81bd00;
+
+.content {
+	width: 1024px;
+	margin: auto;
+}
+header {
+	height: 110px;
+}
+.logo-container {
+	width: 415px;
+	height: 100%;
+	background: #1d1d1d;
+	float: left;
+}
+.logo {
+	width: 204px;
+	height: 56px;
+	cursor: pointer;
+	background-image: url(../content/header/logo.png);
+	float: left;
+	margin-top: 27px;
+	margin-left: 74px;
+}
+.text-header {
+	width: 609px;
+	height: 100%;
+	background-color: #1d1d1d;
+	float: right;
+}
+.powered-by {
+	color: #8c8d8c;
+	margin-top: 38px;
+	margin-left: 28px;
+	font-size: 13px;
+	float: left;
+}
+body.main-theme {
+	margin: 0;
+	font-family: "Helvetica Neue", "Segoe UI", Helvetica, Verdana, sans-serif;
+	width: 100%;
+	background-color: #f6f9f5;
+    font-size: 16px;
+}
+.tabletWidth {
+	min-width: 1024px;
+}
+.authorization {
+	float: right;
+	margin-top: 20px;
+	margin-right: 30px;
+}
+.log-in {
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+	outline: none;
+	background-image: url(../content/header/login.png);
+	&:hover {
+		opacity: 0.9;
+	}
+	&:focus {
+		opacity: 0.9;
+	}
+}
+.padding-password {
+	margin-top: 8px;
+}
+.login-item {
+    width: 354px;
+}
+#login-form {
+	margin-top: 15px;
+	.dx-box-item {
+		padding-left: 10px;
+	}
+}
+.user-authorized {
+	width: 70px;
+	height: 70px;
+	background: url(../content/header/user_authorized.png) no-repeat;
+}
+.log-out-container {
+    text-align: center;
+	.name {
+		color: black;
+        font-size: 23px;
+        margin-top: 67px;
+        font-weight: 500;
+		white-space: nowrap;
+		-ms-text-overflow: ellipsis;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+}
+.buttons-on-popup .button-popup {
+    width: 117px;
+}
+
+.popup {
+	.dx-field {
+		padding: 0.4em 0 1px 0;
+	}
+	.dx-fieldset {
+		margin: 5px 11px 30px 9px;
+	}
+	.dx-popup-title {
+		border-bottom: none;
+		background: none;
+		padding: 21px 30px 0 30px;
+        .dx-closebutton {
+            .dx-icon {
+                color: @accent-color;
+            }
+        }
+	}
+	.dx-toolbar.dx-widget.dx-visibility-change-handler.dx-collection.dx-popup-title {
+		font-size: 24px;
+	}
+    .dx-popup-title.dx-toolbar {
+        .dx-toolbar-before {
+            width: 100%;
+            text-align: center;
+            padding-right: 0;
+        }
+    }
+}
+.ng-scope {
+	.green-button {
+		background-color: #81bd00;
+		border-style: none;
+	}
+	.white-text.dx-button {
+		.dx-button-text {
+			color: white;
+		}
+	}
+	.dx-layout-manager {
+		.dx-field-item {
+			&:not(.dx-first-col) {
+				margin-left: 6px;
+				padding-left: 0;
+			}
+			&:not(.dx-last-col) {
+				padding-right: 0px;
+			}
+		}
+	}
+	.dx-field-item-label-text {
+		color: black;
+	}
+	.dx-tooltip-wrapper.dx-popover-wrapper {
+		.dx-popover-arrow {
+			&:after {
+				border: none;
+				background: #81bd00;
+			}
+		}
+	}
+	.dx-tooltip-wrapper {
+		.dx-overlay-content {
+			border: none;
+			box-shadow: -1px 2px 4px 0px rgba(0, 0, 0, 0.25);
+			background-color: #81bd00;
+		}
+	}
+	.green-button.dx-state-hover {
+		background-color: @accent-color-hover-state;
+	}
+	.green-button.dx-state-focused {
+		background-color: @accent-color-hover-state;
+	}
+}
+.dx-state-focused.dx-overlay-content {
+	outline: none;
+}
+.popup.dx-popup-wrapper {
+	.dx-overlay-content {
+		border: none;
+	}
+}
+.login-popup {
+    .dx-popup-content {
+        .dx-template-wrapper {
+            height: 213px;
+            &.log-out-container {
+                height: 161px;
+            }
+        }
+    }
+}
+.buttons-on-popup.authorized {
+    padding-top: 81px;
+}
+.buttons-on-popup {
+	width: 352px;
+	margin: auto;
+	padding-top: 41px;
+    text-align: center;
+	.button-popup {
+		margin-right: 0;
+		margin-left: 6px;
+        height: 36px;
+	}
+}
+.footer {
+    height: 68px;
+    margin: -1px 15px 0 15px;
+    border-top: 1px solid #d4d6d3;
+
+    .logo {
+        width: 157px;
+		height: 27px;
+        background-image: url(../content/header/logo.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        float: right;
+        margin-top: 21px;
+        background-size: auto 100%;
+    }
+}
+.search-page {
+    .result-search {
+        .big-padding {
+		    padding-right: 158px;
+	    }
+    }
+	.footer {
+		border-top: 0;
+	}
+	.dx-scheduler-header-panel-cell {
+		font-size: 10px;
+	}
+}
+.copyright {
+	float: left;
+	margin-top: 24px;
+	font-size: 13px;
+}
+footer {
+	background-color: #f6f9f5;
+}
+.background-header {
+	background: url(../content/home/club1-home-banner.jpg) no-repeat center top;
+	height: 557px;
+	background-size: cover;
+	.text-header {
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+}
+.home-page {
+	.site-content {
+		margin-top: 2px;
+	}
+	.left-side {
+		.title {
+			font-size: 24px;
+			color: darkgray;
+		}
+		p {
+			font-size: 13px;
+			margin-top: 4px;
+			margin-bottom: 19px;
+		}
+		width: 499px;
+		padding-top: 29px;
+		float: left;
+		padding-right: 61px;
+	}
+	.right-side {
+		p {
+			font-size: 13px;
+			margin-top: 4px;
+			margin-bottom: 19px;
+			margin-bottom: 12px;
+		}
+		width: 499px;
+		padding-top: 61px;
+		padding-left: 9px;
+		float: right;
+		text-align: left;
+	}
+	a {
+		font-size: 14px;
+		color: @accent-color;
+	}
+}
+.search-container {
+	width: 415px;
+	height: 414px;
+	background-color: white;
+	text-align: left;
+	margin-right: 59px;
+	.title {
+		font-size: 23px;
+		margin-left: 30px;
+		padding-top: 32px;
+	}
+	.search {
+		margin-top: 22px;
+		width: 100%;
+	}
+	.search.dx-button {
+		.dx-button-text {
+			font-size: 18px;
+		}
+	}
+}
+.search-form {
+	margin: 0 auto;
+	margin-top: 28px;
+	width: 354px;
+	.dx-layout-manager {
+		.dx-field-item {
+			&:not(.dx-first-row) {
+				padding-top: 18px;
+			}
+		}
+	}
+}
+.groupItems {
+	width: 170px;
+}
+.label {
+	margin-bottom: 3px;
+	font-size: 14px;
+}
+.banner-container {
+	width: 550px;
+	margin-top: 41px;
+	text-align: left;
+	.top-side {
+		height: 195px;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+	.offer-name {
+		font-size: 42px;
+		font-weight: bolder;
+		color: white;
+		width: 495px;
+		padding-top: 5px;
+		margin: auto;
+	}
+	.offer {
+		font-size: 24px;
+		font-weight: lighter;
+		color: @accent-color;
+		margin-left: 25px;
+		padding-top: 8px;
+	}
+	.description {
+        display: inline-block;
+		.text {
+			font-size: 30px;
+			width: 260px;
+			margin-left: 30px;
+			padding-top: 14px;
+			line-height: 36px;
+		}
+	}
+	.bottom-side {
+		height: 147px;
+		background-color: rgba(255, 255, 255, 0.8);
+	}
+	.more-info {
+		position: relative;
+		bottom: 8px;
+		left: 2px;
+		height: 100px;
+		width: 225px;
+	}
+	.more-info.dx-button {
+		.dx-button-text {
+			font-size: 38px;
+			font-weight: lighter;
+		}
+	}
+	.raiting {
+		width: 149px;
+		margin-left: 31px;
+		.value {
+			height: 25px;
+			background-image: url(../content/rating.png);
+		}
+	}
+}
+.info-clubs {
+	height: 353px;
+	background-color: white;
+	margin-top: 31px;
+	padding-top: 23px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.best-title {
+	width: 394px;
+	height: 70px;
+	background: url(../content/home/title.png) no-repeat right;
+	margin-left: 360px;
+	text-align: left;
+	font-size: 48px;
+	font-weight: lighter;
+	margin-top: 3px;
+}
+.best-clubs {
+	margin: 43px auto 0;
+	height: 200px;
+}
+.club {
+	display: inline-block;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	.name {
+		margin-top: 9px;
+		font-size: 14px;
+	}
+	.image {
+		width: 182px;
+		height: 120px;
+		background-repeat: no-repeat;
+		margin: auto;
+		background-size: cover;
+		background-position: center center;
+	}
+	.description {
+		font-size: 13px;
+		color: @accent-color;
+	}
+	.address {
+		font-size: 13px;
+		font-weight: bold;
+		color: darkgray;
+	}
+	&:hover {
+		background-color: #e6f2cc;
+	}
+	&:focus {
+		background-color: #e6f2cc;
+	}
+}
+.text-space {
+	white-space: normal;
+	text-align: left;
+}
+.widgets {
+	.left-side {
+		width: 100px;
+		padding-top: 0;
+	}
+	.right-side {
+		width: 100px;
+		margin-right: 290px;
+		padding-top: 0;
+		margin-left: 0;
+	}
+}
+.dx-calendar-cell.dx-calendar-today {
+	text-shadow: none;
+	font-weight: bold;
+	color: @accent-color;
+}
+.dx-calendar-cell.dx-calendar-contoured-date {
+	-webkit-box-shadow: inset 0 0 0 1px @accent-color;
+    -moz-box-shadow: inset 0 0 0 1px @accent-color;
+    box-shadow: inset 0 0 0 1px @accent-color;
+}
+.info-search {
+	height: 109px;
+	text-align: right;
+    margin-top: 0;
+	.info {
+		margin-left: 30px;
+        margin-top: 14px;
+		text-align: left;
+		.name {
+			font-size: 30px;
+		}
+	}
+	.details {
+		font-size: 14px;
+		color: darkgray;
+	}
+	.right-side {
+		margin: 36px 30px 0 auto;
+	}
+}
+.result-search {
+	background-color: white;
+	position: relative;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    margin: 0;
+	.clubs {
+		text-align: right;
+		padding: 30px 10px 0 0;
+	}
+	.club {
+		padding: 0;
+		margin-right: 21px;
+		background: none;
+		.image {
+			width: 276px;
+			margin: auto;
+		}
+		.name {
+			margin-top: 4px;
+		}
+		.address {
+			margin-bottom: 8px;
+		}
+        .button {
+            width: 276px;
+        }
+		&:nth-child(1) {
+			.button {
+				background-color: #bacb35;
+			}
+			.button.dx-state-hover {
+				background-color: #94a22a;
+			}
+			.button.dx-state-focused {
+				background-color: #94a22a;
+			}
+		}
+		&:nth-child(2) {
+			.button {
+				background-color: #4aca94;
+			}
+			.button.dx-state-hover {
+				background-color: #3ba176;
+			}
+			.button.dx-state-focused {
+				background-color: #3ba176;
+			}
+		}
+		&:nth-child(3) {
+			.button {
+				background-color: #49baca;
+			}
+			.button.dx-state-hover {
+				background-color: #3a94a1;
+			}
+			.button.dx-state-focused {
+				background-color: #3a94a1;
+			}
+		}
+	}
+	.scheduler {
+		padding: 30px 30px 30px 30px;
+		.dx-scheduler-navigator {
+			.dx-button {
+                .dx-icon, .dx-button-text {
+                    color: @accent-color;
+                }
+			}
+		}
+	}
+}
+.change-search {
+    width: 100%;
+    .dx-overlay-content {
+        max-height: 350px;
+        max-width: 415px;
+        min-height: 350px;
+        min-width: 415px;
+    }
+    .dx-invalid-message > .dx-overlay-content {
+        min-height: 0;
+        min-width: 0;
+    }
+    .title {
+        visibility: hidden;
+        height: 0;
+        padding-top: 0;
+    }
+	.search-container {
+		    width: 100%;
+            height: 100%;
+            margin: 2px 0 0 0;
+		.location {
+			margin-left: 10px;
+			margin-top: 0;
+		}
+		.left-side {
+			margin-left: 10px;
+		}
+		.right-side {
+			.dx-fieldset {
+				margin-right: 0;
+			}
+		}
+		.search {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	.search-form {
+		margin-top: 0;
+	}
+}
+.dx-tooltip-wrapper {
+	.dx-overlay-content {
+		.dx-popup-content {
+			background: #81bd00;
+		}
+	}
+}
+.tooltip-template {
+	>div {
+		color: white;
+	}
+	span {
+		color: white;
+	}
+	.caption {
+		font-weight: 700;
+		font-size: 14px;
+	}
+}
+.info-page {
+	.result-search {
+		.img {
+			width: 385px;
+			height: 385px;
+			overflow: hidden;
+			display: inline-block;
+            div {
+		        width: 100%;
+		        height: 100%;
+		        background-position: center center;
+		        background-repeat: no-repeat;
+		        background-size: cover;
+	        }
+		}
+	}
+	.description {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 24px;
+		.details {
+			width: 287px;
+			font-size: 30px;
+			border-bottom: 1px solid #ececec;
+			position: relative;
+			bottom: 13px;
+			color: darkgray;
+			text-align: left;
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+		.label {
+			font-size: 16px;
+			display: inline-block;
+			margin-bottom: 11px;
+		}
+		.rating {
+			height: 24px;
+			background-image: url(../content/rating.png);
+			margin-left: auto;
+		}
+		>div {
+			&:nth-child(4) {
+				border-bottom: 0;
+				>.value {
+					width: 149px;
+					top: 10px;
+					left: 3px;
+				}
+			}
+		}
+	}
+	.value {
+		float: right;
+		position: relative;
+		top: 4px;
+		color: @accent-color;
+	}
+	.value[rating] {
+		width: 149px;
+	}
+	.info-search {
+		.right-side {
+			margin-top: 20px;
+			text-align: right;
+		}
+		.green-button {
+			margin-top: 5px;
+		}
+	}
+	.full-description {
+		padding-top: 30px;
+		padding-left: 30px;
+		.button {
+			background-color: #bacb35;
+			margin-top: 23px;
+            width: 286px;
+		}
+		.text {
+			font-size: 14px;
+		}
+		.button.dx-state-hover {
+			background-color: #94a22a;
+		}
+		.button.dx-state-focused {
+			background-color: #94a22a;
+		}
+	}
+	.scheduler {
+		padding-top: 26px;
+	}
+}
+.date-time {
+	display: inline-block;
+}
+.book-popup {
+    .dx-overlay-content {
+        height: auto;
+    }
+    .template-book {
+        padding-left: 30px;
+        &.dx-template-wrapper {
+            height: 379px;
+        }
+	    .dx-item.dx-box-item {
+		    &:nth-child(2) {
+			    padding-bottom: 6px;
+		    }
+	    }
+	    .buttons-on-popup {
+		    text-align: right;
+		    margin-right: 27px;
+	    }
+    }
+	.title {
+		font-size: 23px;
+		color: @accent-color;
+	}
+	.dx-popup-content {
+		padding-top: 0;
+		padding-left: 0;
+	}
+	.name-club {
+		font-size: 28px;
+		padding-bottom: 18px;
+		bottom: 8px;
+		position: relative;
+	}
+	.dx-popup-title {
+		padding-top: 5px;
+	}
+	.players {
+		margin-top: 12px;
+	}
+	.buttons-on-popup {
+		padding-top: 29px;
+		padding-right: 5px;
+	}
+}
+.date-time.time {
+	margin-left: 7px;
+}
+.booking-date {
+    width: 270px;
+}
+.booking-details {
+    width: 402px;
+}

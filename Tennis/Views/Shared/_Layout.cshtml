@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="tennisApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tennis</title>
+    <link href="~/css/dx.common.css" rel="stylesheet" />
+    <link href="~/css/tb.light.green.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/lib/angular-route/angular-route.min.js"></script>
+    <script src="~/lib/globalize/lib/globalize.js"></script>
+    <script src="~/lib/dx.web.js"></script>
+    <script src="~/js/app.js"></script>
+    <script src="~/js/config.js"></script>
+    <script src="~/js/repository.js"></script>
+    <script src="~/js/utils.js"></script>
+    <script src="~/js/controllers/layoutController.js"></script>
+    <script src="~/js/controllers/homeController.js"></script>
+    <script src="~/js/controllers/searchPanelController.js"></script>
+    <script src="~/js/controllers/infoController.js"></script>
+    <script src="~/js/controllers/bookController.js"></script>
+    <link href="~/css/styles.css" rel="stylesheet" />
+    <link href="~/css/responsive.styles.css" rel="stylesheet" />
+</head>
+<body>
+    @RenderBody()
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

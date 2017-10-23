@@ -1,0 +1,162 @@
+﻿<div class="info-page page">
+    <div class="responsive-info" dx-responsive-box="{
+        rows: [
+            { baseSize: 109, screen: 'lg sm md' },
+            { baseSize: 945, screen: 'lg sm md' },
+            { ratio: 1 },
+            { ratio: 1 }
+        ],
+        cols: [
+            { ratio: 1 },
+            { ratio: 1 }
+        ],
+        screenByWidth: getScreen,
+        singleColumnScreen: 'xs'
+    }">
+        <div class="info-search content" ng-controller="SearchPanelCtrl" data-options="dxItem: {
+            location: [{
+                row: 0,
+                col: 0,
+                screen: 'lg md sm'
+            }, {
+                row: 0,
+                col: 0,
+                screen: 'xs'
+        }]}">
+            <div class="info">
+                <div class="name">{{court.name}}</div>
+                <div class="details">{{court.cover}}</div>
+                <div class="details">{{court.adress}}, {{court.description}}</div>
+            </div>
+        </div>
+        <div class="info-search" ng-controller="SearchPanelCtrl" data-options="dxItem: {
+            location: [{
+                row: 0,
+                col: 1,
+                screen: 'lg md sm'
+            }, {
+                row: 1,
+                col: 0,
+                screen: 'xs'
+        }]}">
+            <div ng-if="court" class="right-side">
+                <div class="details">{{info.date}}</div>
+                <div class="white-text green-button" dx-button="{
+                    width: 183,
+                    height: 41,
+                    onClick: showChangeSearch,
+                    text: 'Change Search'
+               }"></div>
+            </div>
+            <div class="change-search" dx-popup="{
+                fullScreen: false,
+                showTitle: false,
+                shading: false,
+                dragEnabled: false,
+                closeOnOutsideClick: true,
+                width: '100%',
+                height: '100%',
+                contentTemplate: 'searchTemplate',
+                bindingOptions: {
+                    'position.offset': 'responsivenessOptions.offset',
+                    'position.of': 'responsivenessOptions.of',
+                    visible: 'searchPanel.changeSearchVisible'
+                }
+            }">
+                <div ng-class="{'dx-responsivebox-screen-xs': !responsivenessOptions.largeScreen}" data-options="dxTemplate:{ name: 'searchTemplate' }">
+                    <div class="search-container" ng-include="'views/searchPanel.html'"></div>
+                </div>
+            </div>
+        </div>
+        <div class="result-search content" ng-style="{'visibility' : court ? 'visible' : 'hidden'}" data-options="dxItem: {
+            location: [{
+                row: 1,
+                col: 0,
+                colspan: 2,
+                screen: 'lg md sm'
+            }, {
+                row: 1,
+                col: 0,
+                screen: 'xs'
+        }]}">
+            <div class="full-description info">
+                <div ng-if="court" class="img">
+                    <div ng-style="{'background-image':'url({{court.image}})'}"></div>
+                </div>
+                <div class="description">
+                    <div class="details">
+                        <div class="label">Cover:</div>
+                        <div class="value">{{court.cover}}</div>
+                    </div>
+                    <div class="details">
+                        <div class="label">Adress:</div>
+                        <div class="value">{{court.adress}}</div>
+                    </div>
+                    <div class="details">
+                        <div class="label">Description:</div>
+                        <div class="value">{{court.description}}</div>
+                    </div>
+                    <div class="details">
+                        <div class="label">Rating:</div>
+                        <div class="value">
+                            <div class="rating" ng-style="{ 'width' : 20 * 5 + '%'}">
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="club" class="button white-text" dx-button="{
+                        height: 41,
+                        onClick: 'popupBook()',
+                        text: 'Book {{court.name}}'
+                    }"></div>
+                </div>
+            </div>
+            <div class="scheduler" dx-scheduler="options" dx-item-alias="appointment">
+                <div data-options="dxTemplate: {name: 'appointment-template'}">
+                    <div class='showtime-preview'>
+                        <div>{{getTrenerById(appointment.trenerId).name}}</div>
+                        <div>{{getPriceById(appointment.priceId).name}}</div>
+                        <div>
+                            per Price:
+                            <strong>{{'$' + appointment.total}}</strong>
+                        </div>
+                        <div>
+                            count of players:
+                            <strong>{{appointment.count}}</strong>
+                        </div>
+                        <div>
+                            {{(appointment.startDate | date:'h:mm a') + ' - ' + (appointment.endDate | date:'h:mm a')}}
+                        </div>
+                    </div>
+                </div>
+                <div class="tooltip-template" data-options="dxTemplate: {name: 'tooltip-template'}">
+                    <div class='movie-tooltip'>
+                        <div class="tooltip-template">
+                            <div class='movie-title'>
+                                {{getPriceById(appointment.priceId).name + ' (' + '$' + appointment.total + ')'}}
+                            </div>
+                            <div>
+                                {{'Trener: ' + getTrenerById(appointment.trenerId).name}}
+                            </div>
+                            <div>
+                                {{(appointment.startDate | date:'h:mm a') + ' - ' + (appointment.endDate | date:'h:mm a')}}
+                            </div>
+                            <div>
+                                {{'Players: ' + getCustomers(appointment.id)}}
+                            </div>
+                        </div><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div dx-load-panel="{
+        message: 'Loading...',
+        shading: true,
+        showPane: false,
+        shadingColor: '#f6f9f5',
+        position:{ my: 'top', at: 'top', of: '.info-page' },
+        bindingOptions: {
+            visible: 'info.loadingData'
+        }
+    }"></div>
+</div>
